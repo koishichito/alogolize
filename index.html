@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アルゴリズム可視化サイト</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>アルゴリズム可視化サイト</h1>
+    </header>
+    <main>
+        <section id="controls">
+            <select id="algorithm-select">
+                <option value="">アルゴリズムを選択</option>
+                <option value="bubble">バブルソート</option>
+                <option value="selection">選択ソート</option>
+                <option value="insertion">挿入ソート</option>
+                <option value="quick">クイックソート</option>
+                <option value="merge">マージソート</option>
+                </optgroup>
+                <optgroup label="探索アルゴリズム">
+                    <option value="linear">線形探索</option>
+                    <option value="binary">二分探索</option>
+                    <option value="dfs">深さ優先探索</option>
+                    <option value="bfs">幅優先探索</option>
+                </optgroup>
+            </select>
+            <button id="run-btn">実行</button>
+        </section>
+        
+        <section id="search-controls">
+            <input type="number" id="search-target" placeholder="探索対象の値">
+            <button id="search-btn">探索</button>
+        </section>
+        
+        <section id="search-result">
+            <p id="search-result-text"></p>
+        </section>
+        
+        <section id="search-visualization">
+            <div id="search-container"></div>
+        </section>
+
+        <section id="graph-visualization">
+            <div id="graph-container"></div>
+        </section>
+
+        <section id="visualization-area">
+            <div id="array-container"></div>
+        </section>
+        
+        <section id="operation-controls">
+            <input type="range" id="speed-control" min="0.5" max="4" step="0.5" value="1">
+            <label for="speed-control">速度: <span id="speed-value">x1</span></label>
+            <button id="step-btn">ステップ実行</button>
+        </section>
+        
+        <section id="info-panel">
+            <p id="current-operation"></p>
+            <p id="step-count"></p>
+            <p id="comparison-count"></p>
+        </section>
+        
+        <section id="data-input">
+            <button id="random-data">ランダムデータ生成</button>
+            <input type="text" id="manual-input" placeholder="カンマ区切りで数値を入力">
+        </section>
+        
+        <section id="explanation">
+            <h2>アルゴリズムの説明</h2>
+            <p id="algorithm-description"></p>
+            <p id="time-complexity"></p>
+            <p id="space-complexity"></p>
+        </section>
+
+        <div id="result"></div>
+        
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
